@@ -1,0 +1,579 @@
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+
+/*======================== 
+    Background animation
+ ==========================*/
+
+body {
+    height:301vh;
+    margin: 0;
+    --x: calc(var(--posX, 0) * 1px);
+    --y: calc(var(--posY, 0) * 1px);
+    background-image: 
+        linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)), 
+        radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
+        radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
+        radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
+        radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
+        linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+}
+ /*======================== 
+    Navegation Bar
+ ==========================*/
+
+ .navBar {
+    margin-top: 0%;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.name h1{
+    font-family: "Roboto Mono", monospace;
+    color: #DBD8E3;
+    margin-inline: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.indexBox {
+    display: flex;
+    color: #DBD8E3;
+    font-family: "Roboto Mono", monospace;
+}
+.indexBox h2 {
+    font-weight: 300;
+    margin-inline-end: 15px;
+    font-size: 1.5em;
+    color: #DBD8E3;
+}
+
+.indexBoxMedia {
+    display: none;
+}
+/*======================== 
+    Main Banner Area
+ ==========================*/
+.mainBanner {
+    position: relative;
+    height: 631px;
+    display: grid;
+    --transform-speed: 250ms;
+}
+
+
+.mainBanner .aboutMePic {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: #DBD8E3;
+}
+
+.aboutMePic .myLinks{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    background-color: #DBD8E3;
+    height: 35px;
+    border-radius: 0%;
+    width: 250px;
+    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform calc(var(--transform-speed)*1.2) ease;
+}
+
+.aboutMePic .myLinks:hover{
+    transform: scale(1.3);
+
+}
+
+.aboutMePic .pPicture{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.aboutMePic h1 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.aboutMePic h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.aboutMePic a{
+    margin: 0;
+}
+
+.aboutMePic .myLinks a img{
+    border-radius: 0%;
+    height: 25px;
+    width: 25px;
+    margin-inline: 10px;
+    transition: var(--transform-speed) ease-in-out;
+}
+
+.aboutMePic .myLinks a img:hover {
+    transform: scale(1.5);
+}
+
+
+/*======================== 
+    Skills Area
+ ==========================*/
+
+.skills {
+    height: 100vh;
+    transition: 200ms;
+    display: block;
+}
+
+.skills:hover {
+    background-color: white;
+    transition: 200ms;
+}
+
+.skills:hover .projects_WorkExperience h3 {
+    color: #000000;
+    transition: 200ms ease;
+}
+
+.skills:hover .subTitle h1 {
+    color: #000000;
+    transition: 200ms ease;
+}
+
+.skills .subTitle {
+    height: 20vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.skills .subTitle h1{
+   padding: 20px;
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 3em;
+    color: #DBD8E3;
+}
+
+
+
+.skills .projects_WorkExperience h3{
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 90;
+    color: #DBD8E3;
+}
+
+.skills .projects_WorkExperience .title h3{
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.skills img{
+    height: 120px;
+    width: 120px;
+}
+
+img[alt~="Bonicaps"] {
+    border-radius: 100%;
+}
+
+img[alt~="Pizzeria"] {
+    border-radius: 100%;
+}
+img[alt~="Web"] {
+    border-radius: 100%;
+}
+img[alt~="Liceo"] {
+    border-radius: 100%;
+}
+
+/*======================== 
+    About me Area
+ ==========================*/
+
+ .aboutMeArea {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+ }
+
+.aboutMeArea .aboutMeSub {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+ .aboutMeArea .aboutMeSub h1{
+    height: 10vh;
+    margin: 0;
+    margin-top: 10px;
+    margin-inline: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 3em;
+    color: #DBD8E3;
+ }
+
+.aboutMeArea .aboutmeContent {
+    display: flex;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies h2{
+    margin-top: 10px;
+    margin-inline: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2em;
+    color: #DBD8E3;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies h3{
+    margin: 0;
+    margin-inline: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #DBD8E3;
+}
+
+ .aboutMeArea .aboutmeContent img{
+    border-radius: 25px;
+    display: block;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+ }
+
+ .carrousel {
+    margin: 2vh;
+    height: 80vh;
+    width: 60vh;
+    position: relative;
+}
+ 
+ .carrousel > ul {
+    padding: 0%;
+    margin: 0;
+    list-style: none;
+ }
+
+ .carrousel .slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity  ease-in-out;
+    transition-delay: 0ms;
+ }
+
+ .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+ }
+ .carrousel button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: 25rem;
+    padding: 0.5rem;
+    background-color: rgba(0,0, 0, .1);
+ }
+ .carrousel button:hover,
+ .carrousel button:focus {
+    color: white;
+    background-color: rgba(0,0, 0, .2);
+ }
+ .carrousel button:focus {
+    outline: 1px solid black;
+ }
+.carrouselPreviousButton {
+    left: 1rem;
+ }
+
+.carrouselnextButton {
+    right: 1rem;
+ }
+ /*======================== 
+    Footer Area
+ ==========================*/
+
+ .footerArea {
+    height: 40vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+
+ }
+
+ .footerArea .footerFindMe {
+    display: flex;
+    height: 25vh;
+    width: 50vh;
+    margin: 5vh;
+    background-color: #DBD8E3;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.footerArea .footerFindMe table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-spacing: 0.5em;
+}
+
+.footerArea .footerFindMe img{
+    height: 25px;
+    width: 25px;
+}
+.footerArea .footerFindMe h4{
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1em;
+    color: #000000;
+}
+
+.footerArea .footerPhrase {
+    display: flex;
+    align-items: center;
+}
+
+.footerArea .footerPhrase h2{
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 2em;
+    color: #DBD8E3;
+}
+
+.footerArea .footerWebAct {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.footerArea .footerWebAct h4 {
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    color: #DBD8E3;
+}
+/*This is the adaptation for media devices with screens width:768px */
+
+@media (max-width: 768px) {
+    body{
+        margin: 0;
+        background-image: none;
+        background: linear-gradient(180deg, #000346 0%, #FF0000 100%), linear-gradient(58.72deg, #0029FF 0%, #AA0014 100%), radial-gradient(100% 164.72% at 100% 100%, #FF00A8 0%, #00FF47 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+        background-blend-mode: overlay, overlay, difference, normal;
+    }
+
+
+/*======================== 
+    Navegation Bar
+ ==========================*/
+    .navBar {
+        background-color: #000000;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navBar .name {
+        display: flex;
+        
+    }
+
+    .navBar .name h1 {
+        font-size: 1.8em;
+        font-weight: 200;
+    }
+
+    .indexBox {
+        display: none;
+    }
+
+   /* .indexBoxMedia {
+        display: inline-block;
+        position: relative;
+    }
+
+    .dropdownMenu {
+        background-image: url(../images/dropdownM.png);
+        border: none;
+        color: #DBD8E3;
+        font-size: 1.8em;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .navbarCollapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #000;
+        width: 180px;
+        border: 1px solid #DBD8E3;
+        z-index: 10;
+        border-radius: 8px;
+    }
+
+    .navbarCollapse.show {
+        display: block;
+    }
+
+    .navCollapseUl {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navCollapseUl li {
+        border-bottom: 1px solid #DBD8E3;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navCollapseUl li a h2 {
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .indexBoxMedia h2 {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    margin-inline-end: 15px;
+    font-size: 1.5em;
+    color: #DBD8E3;
+    } */
+
+    /*======================== 
+    Main Banner Area
+ ==========================*/
+
+    .mainBanner {
+        margin-inline: 3%;
+        height: 100vh;
+    }
+    .mainBanner .aboutMePic img {
+        height: 300px;
+        width: 300px;
+    }
+    .mainBanner .aboutMePic h1 {
+        font-size: 1.4em;
+        font-weight: 300;
+        background-color: #DBD8E3;
+        color: #000000;
+        border-radius: 25px;
+        padding-inline: 3px;
+    }
+
+    /*======================== 
+    Skills Area
+ ==========================*/
+    .skills {
+        position: relative;
+        display: none;
+    }
+
+/*======================== 
+    About Me Area
+ ==========================*/
+    .aboutMeArea {
+        display: inline;
+    }
+    .aboutMeSub {
+        display: flex;
+        justify-content: space-around;
+    }
+    .aboutMeArea .aboutmeContent {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .carrousel {
+        margin: 2vh;
+        margin-inline: auto;
+        height: 28em;
+        width: 21em;
+    }
+
+    .aboutMeArea .aboutmeContent img {
+        height: 28em;
+        width: 21em;
+    }
+
+    .aboutMeArea .aboutmeContent .aboutMeHobbies h3 {
+        margin-bottom: 10px;
+    }
+
+    /*======================== 
+    Footer Area
+ ==========================*/
+    .footerArea {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footerArea .footerFindMe {
+        height: auto;
+        width: max-content;
+        margin: 20px 10px 10px 20px;
+        margin-inline: auto;
+    }
+    .footerArea .footerPhrase h2{
+        margin-bottom: 20px;
+    }
+}

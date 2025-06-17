@@ -1,0 +1,9 @@
+/*This is the adaptation for media devices with screens width:768px */
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: black;
+        height: 100%;
+    }
+}

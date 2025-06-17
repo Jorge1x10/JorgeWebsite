@@ -1,0 +1,324 @@
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+
+/*======================== 
+    Background animation
+ ==========================*/
+
+body {
+    height:300vh;
+    margin: 0;
+    --x: calc(var(--posX, 0) * 1px);
+    --y: calc(var(--posY, 0) * 1px);
+    background-image: 
+        linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)), 
+        radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
+        radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
+        radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
+        radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
+        linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+}
+ /*======================== 
+    Navegation Bar
+ ==========================*/
+
+ .navBar {
+    margin-top: 0%;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.name h1{
+    font-family: "Roboto Mono", monospace;
+    color: #DBD8E3;
+    margin-inline: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.indexBox {
+    display: flex;
+    color: #DBD8E3;
+    font-family: "Roboto Mono", monospace;
+}
+.indexBox h2 {
+    font-weight: 300;
+    margin-inline-end: 15px;
+    font-size: 1.5em;
+    color: #DBD8E3;
+}
+/*======================== 
+    Main Banner Area
+ ==========================*/
+.mainBanner {
+    position: relative;
+    height: 631px;
+    display: grid;
+}
+
+
+.mainBanner .aboutMePic {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: #DBD8E3;
+}
+
+.aboutMePic .myLinks{
+    background-color: #DBD8E3;
+    height: 35px;
+    border-radius: 0%;
+    width: 200px;
+    align-content: center;
+    padding-top: 3px;
+    border-radius: 10px;
+}
+
+.aboutMePic .pPicture{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.aboutMePic h1 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.aboutMePic h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.aboutMePic a{
+    margin: 0;
+}
+
+.aboutMePic .myLinks a img{
+    border-radius: 0%;
+    height: 25px;
+    width: 25px;
+    margin-inline: 10px;
+}
+
+/*======================== 
+    Skills Area
+ ==========================*/
+
+.skills {
+    height: 100vh;
+    background-color: #DBD8E3;
+}
+
+.skills .subTitle {
+    height: 20vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.skills .subTitle h1{
+   padding: 20px;
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 3em;
+    color: #000000;
+}
+
+.skills .projects_WorkExperience h3{
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 90;
+    color: #000000;
+}
+
+.skills .projects_WorkExperience .title h3{
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.skills img{
+    height: 120px;
+    width: 120px;
+}
+
+img[alt~="Bonicaps"] {
+    border-radius: 100%;
+}
+
+img[alt~="Pizzeria"] {
+    border-radius: 100%;
+}
+img[alt~="Web"] {
+    border-radius: 100%;
+}
+img[alt~="Liceo"] {
+    border-radius: 100%;
+}
+
+/*======================== 
+    About me Area
+ ==========================*/
+
+ .aboutMeArea {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+ }
+
+.aboutMeArea .aboutMeSub {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+ .aboutMeArea .aboutMeSub h1{
+    height: 10vh;
+    margin: 0;
+    margin-top: 10px;
+    margin-inline: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 3em;
+    color: #DBD8E3;
+ }
+
+.aboutMeArea .aboutmeContent {
+    display: flex;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies h2{
+    margin-top: 10px;
+    margin-inline: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2em;
+    color: #DBD8E3;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies h3{
+    margin: 0;
+    margin-inline: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #DBD8E3;
+}
+
+.aboutMeArea .aboutmeContent .aboutMeHobbies img {
+    height: 15vh;
+}
+
+
+ .aboutMeArea .aboutmeContent img{
+    height: 80vh;
+    margin: 5vh;
+    margin-top: 0;
+    border-radius: 25px;
+ }
+
+ /*======================== 
+    Footer Area
+ ==========================*/
+
+ .footerArea {
+    height: 40vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+
+ }
+
+ .footerArea .footerFindMe {
+    display: flex;
+    height: 25vh;
+    width: 50vh;
+    margin: 5vh;
+    background-color: #DBD8E3;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.footerArea .footerFindMe table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-spacing: 0.5em;
+}
+
+.footerArea .footerFindMe img{
+    height: 25px;
+    width: 25px;
+}
+.footerArea .footerFindMe h4{
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1em;
+    color: #000000;
+}
+
+.footerArea .footerPhrase {
+    display: flex;
+    align-items: center;
+}
+
+.footerArea .footerPhrase h2{
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 2em;
+    color: #DBD8E3;
+}
+
+.footerArea .footerWebAct {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.footerArea .footerWebAct h4 {
+    margin: 0;
+    margin-inline: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    color: #DBD8E3;
+}
